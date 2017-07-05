@@ -1,5 +1,5 @@
-
 import UIKit
+import AudioToolbox
 
 class ViewController: UIViewController {
     
@@ -10,8 +10,30 @@ class ViewController: UIViewController {
     private var isRunning = false
     private var startDate: Date?
     private var heartbeatTimer: Timer?
+    private var didPing = false
+    
+    private let pingThreshold: TimeInterval = 30 * 60  // half hour of solid focused work
     
     private let dateFormatter = DateFormatter()
+    
+    private func elapsedTime() -> TimeInterval {
+        guard let startDate = startDate else { return 0 }
+        let time = abs(startDate.timeIntervalSinceNow)
+        return time
+    }
+    
+    private func ping() {
+        AudioServicesPlaySystemSound(1057) // Tink - In honor of Lisa Joseph
+    }
+    
+    private func maybePing() {
+        guard !didPing else { return }
+        
+        if elapsedTime() > pingThreshold {
+            ping()   
+            didPing = true
+        }
+    }
     
     private func start() {
         isRunning = true
@@ -54,7 +76,8 @@ class ViewController: UIViewController {
     @objc private func lubdub() {
         precondition(startDate != nil)
         precondition(isRunning)
-        
+
+        maybePing()
         updateElapsedTimeLabel()
     }
     
@@ -63,8 +86,7 @@ class ViewController: UIViewController {
             elapsedTimeLabel.text = "0:00:00"
             return   
         }
-        let time = abs(startDate.timeIntervalSinceNow)
-        elapsedTimeLabel.text = time.HHMMSS()
+        elapsedTimeLabel.text = elapsedTime().HHMMSS()
     }
     
     override func viewDidLoad() {
