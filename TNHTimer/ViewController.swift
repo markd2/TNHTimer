@@ -88,6 +88,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Put a bit of a round on the button's corners
+        startDoneButton.layer.cornerRadius = 8
+        startDoneButton.layer.masksToBounds = true
+        
         // Fresh run, hide the timer label and elapsed time label
         startTimeLabel.isHidden = true
         elapsedTimeLabel.isHidden = true
