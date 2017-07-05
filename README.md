@@ -42,3 +42,12 @@ This is perfect for copying into my analog unschedule.  I use a [Field
 Notes](https://fieldnotesbrand.com/products/campfire) grid book and
 fountain pens (3 ink colors for different activities), augmented with a pencil.
 
+
+## TODO
+
+It works! But of course could be made better
+
+- [ ] Run the background and go _ping_ when the 30 minute threashold is passed
+- [ ] prevent device sleep when run in the foreground
+- [ ] Display something on the mikey screen
+
