@@ -1,25 +1,30 @@
-//
-//  ViewController.swift
-//  TNHTimer
-//
-//  Created by markd on 7/4/17.
-//  Copyright © 2017 Borkware. All rights reserved.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var startTimeLabel: UILabel!
+    @IBOutlet var elapsedTimeLabel: UILabel!
+    @IBOutlet var startDoneButton: UIButton!
+    
+    private var running = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        updateUI()
     }
+    
+    private func updateUI() {
+        startTimeLabel.isHidden = !running
+        elapsedTimeLabel.isHidden = !running
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let buttonTitle = running ? "Done" : "Start"
+        startDoneButton.setTitle(buttonTitle, for: .normal)
     }
-
-
+    
+    @IBAction func toggleStartDone() {
+        running = !running
+        updateUI()        
+    }
 }
 

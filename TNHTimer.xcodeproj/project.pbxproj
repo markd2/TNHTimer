@@ -421,6 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2HBB3G8HCG;
 				INFOPLIST_FILE = TNHTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.borkware.TNHTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -435,6 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2HBB3G8HCG;
 				INFOPLIST_FILE = TNHTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.borkware.TNHTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,6 +526,7 @@
 				7D3424AF1F0C672A00A60531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D3424B01F0C672A00A60531 /* Build configuration list for PBXNativeTarget "TNHTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +535,7 @@
 				7D3424B21F0C672A00A60531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D3424B31F0C672A00A60531 /* Build configuration list for PBXNativeTarget "TNHTimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +544,7 @@
 				7D3424B51F0C672A00A60531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
