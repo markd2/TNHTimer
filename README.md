@@ -2,7 +2,9 @@
 
 Hello!  Welcome to my quick little pröject!  I've recently (Early July, 2017), been
 using [The Now Habit](http://www.neilfiore.com/now-habit/) to "unschedule" my work
-day.  
+day.   (I recommend getting the dead-trees version if you're interested.  The iBooks
+version doesn't flow very well, plus the parts when applying TNH are kind of hard use
+in electronic form.)
 
 ### TL;DR
 
@@ -39,5 +41,4 @@ This is my highly detailed software behavior architecture document:
 This is perfect for copying into my analog unschedule.  I use a [Field
 Notes](https://fieldnotesbrand.com/products/campfire) grid book and
 fountain pens (3 ink colors for different activities), augmented with a pencil.
-
 
