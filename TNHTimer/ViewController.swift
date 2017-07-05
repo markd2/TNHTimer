@@ -58,7 +58,7 @@ class ViewController: UIViewController {
             return   
         }
         let time = abs(startDate.timeIntervalSinceNow)
-        print("time is \(time)")
+        elapsedTimeLabel.text = time.HHMMSS()
     }
     
     override func viewDidLoad() {
@@ -85,4 +85,17 @@ class ViewController: UIViewController {
         updateUI()        
     }
 }
+
+
+
+extension TimeInterval {
+    func HHMMSS() -> String {
+        let hours = Int(self) / (60*60)
+        let minutes = (Int(self) - hours * 60*60) / 60
+        let seconds = Int(self) % 60
+        let timeString = String.init(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        return timeString
+    }
+}
+
 
