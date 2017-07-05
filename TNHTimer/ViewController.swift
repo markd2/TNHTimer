@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     private func start() {
         isRunning = true
         startDate = Date()
+
+        startTimeLabel.isHidden = false
+        elapsedTimeLabel.isHidden = false
+
         startTimer()
     }
     
@@ -63,13 +67,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Fresh run, hide the timer label and elapsed time label
+        startTimeLabel.isHidden = true
+        elapsedTimeLabel.isHidden = true
+
         updateUI()
     }
     
     private func updateUI() {
-        startTimeLabel.isHidden = !isRunning
-        elapsedTimeLabel.isHidden = !isRunning
-
         let buttonTitle = isRunning ? "Done" : "Start"
         startDoneButton.setTitle(buttonTitle, for: .normal)
         
