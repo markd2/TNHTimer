@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     private var startDate: Date?
     private var heartbeatTimer: Timer?
     
+    private let dateFormatter = DateFormatter()
+    
     private func start() {
         isRunning = true
         startDate = Date()
@@ -78,6 +80,15 @@ class ViewController: UIViewController {
     private func updateUI() {
         let buttonTitle = isRunning ? "Done" : "Start"
         startDoneButton.setTitle(buttonTitle, for: .normal)
+        
+        if let startDate = startDate {
+            dateFormatter.dateFormat = "h:mm:ss"
+            dateFormatter.timeZone = TimeZone.current
+            let dateString = dateFormatter.string(from: startDate)
+
+            let labelText = "Started at: " + dateString
+            startTimeLabel.text = labelText
+        }
         
         updateElapsedTimeLabel()
     }
