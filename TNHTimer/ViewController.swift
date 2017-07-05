@@ -82,10 +82,6 @@ class ViewController: UIViewController {
     }
     
     private func updateElapsedTimeLabel() {
-        guard let startDate = startDate else {
-            elapsedTimeLabel.text = "0:00:00"
-            return   
-        }
         elapsedTimeLabel.text = elapsedTime().HHMMSS()
     }
     
@@ -104,11 +100,11 @@ class ViewController: UIViewController {
         startDoneButton.setTitle(buttonTitle, for: .normal)
         
         if let startDate = startDate {
-            dateFormatter.dateFormat = "h:mm:ss"
+            dateFormatter.dateFormat = "h:mm"
             dateFormatter.timeZone = TimeZone.current
             let dateString = dateFormatter.string(from: startDate)
 
-            let labelText = "Started at: " + dateString
+            let labelText = "Started: " + dateString
             startTimeLabel.text = labelText
         }
         
