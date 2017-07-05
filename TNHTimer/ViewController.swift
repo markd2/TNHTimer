@@ -7,7 +7,17 @@ class ViewController: UIViewController {
     @IBOutlet var elapsedTimeLabel: UILabel!
     @IBOutlet var startDoneButton: UIButton!
     
-    private var running = false
+    private var isRunning = false
+    private var startDate: Date?
+    
+    private func start() {
+        isRunning = true
+        startDate = Date()
+    }
+    
+    private func stop() {
+        isRunning = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +25,19 @@ class ViewController: UIViewController {
     }
     
     private func updateUI() {
-        startTimeLabel.isHidden = !running
-        elapsedTimeLabel.isHidden = !running
+        startTimeLabel.isHidden = !isRunning
+        elapsedTimeLabel.isHidden = !isRunning
 
-        let buttonTitle = running ? "Done" : "Start"
+        let buttonTitle = isRunning ? "Done" : "Start"
         startDoneButton.setTitle(buttonTitle, for: .normal)
     }
     
     @IBAction func toggleStartDone() {
-        running = !running
+        if !isRunning {
+            start()    
+        } else {
+            stop()   
+        }
         updateUI()        
     }
 }
