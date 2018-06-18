@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,29 +19,29 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Started:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRC-BL-eed">
-                                <rect key="frame" x="137.66666666666669" y="85" width="138.66666666666669" height="49"/>
+                                <rect key="frame" x="90.5" y="85" width="139" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:88:88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87Q-47-4h3">
-                                <rect key="frame" x="96.666666666666686" y="142" width="221" height="91"/>
+                                <rect key="frame" x="49.5" y="142" width="221" height="91"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="66"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TNH  Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loq-xs-39q">
-                                <rect key="frame" x="101.66666666666669" y="28" width="211" height="49"/>
+                                <rect key="frame" x="54.5" y="28" width="211" height="49"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oX-2T-6ci">
-                                <rect key="frame" x="5" y="241" width="404" height="407"/>
+                                <rect key="frame" x="5" y="241" width="310" height="239"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">• Aim for starting on thirty minutes of quality work
 • Do not work more than 5 hours on this project a day
@@ -54,7 +55,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DH-dE-UKD">
-                                <rect key="frame" x="107" y="656" width="200" height="60"/>
+                                <rect key="frame" x="60" y="488" width="200" height="60"/>
                                 <color key="backgroundColor" red="0.86560615853631095" green="0.75426101417396274" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7HG-lP-NUe"/>
@@ -68,10 +69,18 @@
                                     <action selector="toggleStartDone" destination="BYZ-38-t0r" eventType="touchUpInside" id="hQa-mS-Exh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12j-Ag-BbJ">
+                                <rect key="frame" x="266" y="530" width="30" height="30"/>
+                                <state key="normal" title="U"/>
+                                <connections>
+                                    <segue destination="bsm-UT-03c" kind="presentation" id="4lS-kY-Yzt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mRC-BL-eed" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3UY-TE-KFg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="12j-Ag-BbJ" secondAttribute="trailing" constant="8" id="6AK-x0-Gal"/>
                             <constraint firstItem="5DH-dE-UKD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6G4-qU-pZP"/>
                             <constraint firstItem="mRC-BL-eed" firstAttribute="top" secondItem="Loq-xs-39q" secondAttribute="bottom" constant="8" id="DAO-Qr-jyP"/>
                             <constraint firstItem="Loq-xs-39q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DFu-ts-L3n"/>
@@ -81,6 +90,7 @@
                             <constraint firstAttribute="trailing" secondItem="5oX-2T-6ci" secondAttribute="trailing" constant="5" id="J7v-bz-wLb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5DH-dE-UKD" secondAttribute="bottom" constant="20" id="TmL-eR-XcG"/>
                             <constraint firstItem="Loq-xs-39q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="VZI-kB-cij"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="12j-Ag-BbJ" secondAttribute="bottom" constant="8" id="fty-Z5-sxm"/>
                             <constraint firstItem="87Q-47-4h3" firstAttribute="top" secondItem="mRC-BL-eed" secondAttribute="bottom" constant="8" id="kRt-8l-mnm"/>
                             <constraint firstItem="5DH-dE-UKD" firstAttribute="top" secondItem="5oX-2T-6ci" secondAttribute="bottom" constant="8" symbolic="YES" id="t4C-hs-Akb"/>
                         </constraints>
@@ -95,6 +105,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116.25" y="123.59154929577466"/>
+        </scene>
+        <!--Unschedule View Controller-->
+        <scene sceneID="9ay-8c-vTC">
+            <objects>
+                <viewController id="bsm-UT-03c" customClass="UnscheduleViewController" customModule="TNHTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qwc-mD-kSv"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Hh-K6-Syn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sTN-ji-0j2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="roC-3G-7A1">
+                                <rect key="frame" x="8" y="92" width="304" height="468"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unschedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuK-zV-t6F">
+                                <rect key="frame" x="46" y="35" width="228" height="49"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34r-aP-Iqd">
+                                <rect key="frame" x="8" y="7" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <action selector="back" destination="bsm-UT-03c" eventType="touchUpInside" id="slz-vY-h9a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="roC-3G-7A1" firstAttribute="leading" secondItem="sTN-ji-0j2" secondAttribute="leading" constant="8" id="7Yp-EW-NKR"/>
+                            <constraint firstItem="2Hh-K6-Syn" firstAttribute="top" secondItem="roC-3G-7A1" secondAttribute="bottom" constant="8" id="NXm-vP-ecy"/>
+                            <constraint firstAttribute="trailing" secondItem="roC-3G-7A1" secondAttribute="trailing" constant="8" id="hbK-Xf-kYA"/>
+                            <constraint firstItem="WuK-zV-t6F" firstAttribute="top" secondItem="qwc-mD-kSv" secondAttribute="bottom" constant="15" id="kwD-r7-IDE"/>
+                            <constraint firstItem="WuK-zV-t6F" firstAttribute="centerX" secondItem="sTN-ji-0j2" secondAttribute="centerX" id="lyd-Kd-FS8"/>
+                            <constraint firstItem="roC-3G-7A1" firstAttribute="top" secondItem="WuK-zV-t6F" secondAttribute="bottom" constant="8" id="ptV-a8-wlk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurbTextView" destination="roC-3G-7A1" id="bCl-9K-dvg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TO2-d6-Py5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="143"/>
         </scene>
     </scenes>
 </document>
