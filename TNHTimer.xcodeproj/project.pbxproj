@@ -14,6 +14,8 @@
 		7D3424931F0C672A00A60531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3424911F0C672A00A60531 /* LaunchScreen.storyboard */; };
 		7D34249E1F0C672A00A60531 /* TNHTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D34249D1F0C672A00A60531 /* TNHTimerTests.swift */; };
 		7D3424A91F0C672A00A60531 /* TNHTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3424A81F0C672A00A60531 /* TNHTimerUITests.swift */; };
+		7D60E1A920D743B200957304 /* Bullets.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7D60E1A820D743B200957304 /* Bullets.rtf */; };
+		7D60E1AD20D7447A00957304 /* StringUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60E1AC20D7447A00957304 /* StringUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		7D3424A41F0C672A00A60531 /* TNHTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNHTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3424A81F0C672A00A60531 /* TNHTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNHTimerUITests.swift; sourceTree = "<group>"; };
 		7D3424AA1F0C672A00A60531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D60E1A820D743B200957304 /* Bullets.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = Bullets.rtf; path = assets/Bullets.rtf; sourceTree = SOURCE_ROOT; };
+		7D60E1AC20D7447A00957304 /* StringUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		7D3424871F0C672A00A60531 /* TNHTimer */ = {
 			isa = PBXGroup;
 			children = (
+				7D60E1A820D743B200957304 /* Bullets.rtf */,
 				7D3424881F0C672A00A60531 /* AppDelegate.swift */,
 				7D34248A1F0C672A00A60531 /* ViewController.swift */,
 				7D34248C1F0C672A00A60531 /* Main.storyboard */,
 				7D34248F1F0C672A00A60531 /* Assets.xcassets */,
 				7D3424911F0C672A00A60531 /* LaunchScreen.storyboard */,
 				7D3424941F0C672A00A60531 /* Info.plist */,
+				7D60E1AC20D7447A00957304 /* StringUtilities.swift */,
 			);
 			path = TNHTimer;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D60E1A920D743B200957304 /* Bullets.rtf in Resources */,
 				7D3424931F0C672A00A60531 /* LaunchScreen.storyboard in Resources */,
 				7D3424901F0C672A00A60531 /* Assets.xcassets in Resources */,
 				7D34248E1F0C672A00A60531 /* Main.storyboard in Resources */,
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D34248B1F0C672A00A60531 /* ViewController.swift in Sources */,
+				7D60E1AD20D7447A00957304 /* StringUtilities.swift in Sources */,
 				7D3424891F0C672A00A60531 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@ class ViewController: UIViewController {
     @IBOutlet var startTimeLabel: UILabel!
     @IBOutlet var elapsedTimeLabel: UILabel!
     @IBOutlet var startDoneButton: UIButton!
+    @IBOutlet var bulletPointsTextView: UITextView!
     
     private var isRunning = false
     private var startDate: Date?
@@ -85,6 +86,16 @@ class ViewController: UIViewController {
         elapsedTimeLabel.text = elapsedTime().HHMMSS()
     }
     
+    private func populateBulletPointsBox() {
+        let bundle = Bundle.main
+        guard let releaseNotesUrl = bundle.url(forResource: "Bullets", withExtension: "rtf"),
+            let releaseNotes = NSMutableAttributedString.fromRTFURL(releaseNotesUrl) else {
+                return
+        }
+        
+        bulletPointsTextView.attributedText = releaseNotes
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -95,6 +106,8 @@ class ViewController: UIViewController {
         // Fresh run, hide the timer label and elapsed time label
         startTimeLabel.isHidden = true
         elapsedTimeLabel.isHidden = true
+        
+        populateBulletPointsBox()
 
         updateUI()
     }
