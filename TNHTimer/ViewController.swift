@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     private var startDate: Date?
     private var heartbeatTimer: Timer?
     private var didPing = false
+
+    private var bgRideTimerTask = UIBackgroundTaskInvalid
     
     private let pingThreshold: TimeInterval = 30 * 60  // half hour of solid focused work
     
@@ -62,6 +64,9 @@ class ViewController: UIViewController {
                                               selector: #selector(self.lubdub), 
                                               userInfo: nil, 
                                               repeats: true)
+        let app = UIApplication.shared
+        app.endBackgroundTask(bgRideTimerTask)
+        bgRideTimerTask = app.beginBackgroundTask(withName: "TNH background task") { }
     }
     
     private func stopTimer() {
@@ -80,6 +85,7 @@ class ViewController: UIViewController {
 
         maybePing()
         updateElapsedTimeLabel()
+        ExtensionDataManager.label1Text = elapsedTime().HHMMSS()
     }
     
     private func updateElapsedTimeLabel() {

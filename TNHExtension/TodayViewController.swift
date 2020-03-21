@@ -1,23 +1,34 @@
-//
-//  TodayViewController.swift
-//  TNHExtension
-//
-//  Created by markd on 3/21/20.
-//  Copyright © 2020 Borkware. All rights reserved.
-//
-
 import UIKit
 import NotificationCenter
 
-class TodayViewController: UIViewController, NCWidgetProviding {
+class TodayViewController: UIViewController {
+    @IBOutlet var timerLabel: UILabel!
+
+    private var isRequiredToUpdate: Bool {
+        return timerLabel.text != ExtensionDataManager.label1Text  // :-|
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateUI()
     }
-        
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI()
+    }
+
+    func updateUI() {
+        timerLabel.text = ExtensionDataManager.label1Text
+    }
+}
+
+
+extension TodayViewController: NCWidgetProviding {
+
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
+
         
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
@@ -25,5 +36,5 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         completionHandler(NCUpdateResult.newData)
     }
-    
 }
+
