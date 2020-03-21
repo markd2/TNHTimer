@@ -38,16 +38,11 @@ This is my highly detailed software behavior architecture document:
 * The timer keeps running until you tell it to stop.  
 * It'll tell you how much time you spent on this Activity, along with the start time.
 
-This is perfect for copying into my analog unschedule.  I use a [Field
-Notes](https://fieldnotesbrand.com/products/campfire) grid book and
-fountain pens (3 ink colors for different activities), augmented with a pencil.
+This is perfect for copying into my analog unschedule.  I use a [Leuchtturm-1917 Bullet Journal](https://www.gouletpens.com/products/leuchtturm1917-bullet-journal-a5-notebook-black) dot-grid,
+and fountain pens - multiple ink colors for different activities, augmented with a pencil.
 
 
 ## TODO
 
-It works! But of course could be made better
-
-- [ ] Run the background and go _ping_ when the 30 minute threashold is passed
-- [ ] prevent device sleep when run in the foreground
-- [ ] Display something on the mikey screen
+It works! But of course could be made better.  See the [Kornborn projects](https://github.com/markd2/TNHTimer/projects)
 
